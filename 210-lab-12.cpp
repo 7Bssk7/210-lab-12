@@ -50,7 +50,6 @@ void outputArray(array<int, SIZE> list){
     for(int gr : list) cout << gr << " "; cout << endl;
     cout << "Highest grade recieved on the exam: " << *max_element(list.begin(), list.end()) << endl;
     cout << "Lowest grade recieved on the exam: " << *min_element(list.begin(), list.end()) << endl;
-
-
+    cout << "Class average on the exam(the nearest whole number): " << ((accumulate(list.begin(), list.end(), 0)) / SIZE) << endl;
 
 }
