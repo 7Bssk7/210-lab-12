@@ -41,7 +41,13 @@ void outputArray(array<int, SIZE> list){
     cout << "Did the entire class miss the exam?" << endl;
     cout << (list.empty() == 0? "No" : "Yes" ) << endl;
     cout << "Did any of the student miss the exam?(some one got a grade of 0)" << endl;
-    cout << (found != list.end()? "Yes, unfortunately at least one student missed the exam." : "No, none of the students missed the exam") << endl;
+    cout << (found != list.end()? "Yes, unfortunately at least one student missed the exam." : "No, none of the students missed the exam.") << endl;
+    cout << "Sorted list of the grades from lowest to highest: " << endl;
+    sort(list.begin(), list.end());
+    for(int gr : list) cout << gr << " "; cout << endl; 
+    cout << "And here is the list of grades from highest to lowest: " <<endl;
+    sort(list.rbegin(), list.rend());
+    for(int gr : list) cout << gr << " "; cout << endl;
 
 
 
