@@ -28,6 +28,8 @@ int main(){
     }
     else{
         cout << "Error, file is not opening "<< endl;
+
+        return 1;
     }
     //Calls function to output all array information
     outputArray(grades);
