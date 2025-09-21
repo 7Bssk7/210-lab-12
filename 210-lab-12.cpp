@@ -35,6 +35,10 @@ void outputArray(array<int, SIZE> list){
     cout << "Number of student: " << list.size()<< endl;
     cout << "List of all grades for the exam 1: " << endl;
     for(int gr : list ) cout << gr << " "; cout << endl;
+    cout << "Grade of the very first student in the list" << list.front() << endl;
+    cout << "Grade of the very last student in the list" << list.back() << endl;
+    cout << "Did the entire class miss the exam?" << endl;
+    cout << (list.empty() == 0? "No" : "Yes" ) << endl;
 
 
 }
