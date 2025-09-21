@@ -48,6 +48,8 @@ void outputArray(array<int, SIZE> list){
     cout << "And here is the list of grades from highest to lowest: " <<endl;
     sort(list.rbegin(), list.rend());
     for(int gr : list) cout << gr << " "; cout << endl;
+    cout << "Highest grade recieved on the exam: " << *max_element(list.begin(), list.end()) << endl;
+    cout << "Lowest grade recieved on the exam: " << *min_element(list.begin(), list.end()) << endl;
 
 
 
