@@ -5,7 +5,7 @@
 #include <fstream>
 using namespace std;
 
-const int SIZE = 40;
+const int SIZE = 40, MISSED_EXAM = 0;
 
 void outputArray(array<int, SIZE>);
 
@@ -30,6 +30,7 @@ int main(){
 }
 
 void outputArray(array<int, SIZE> list){
+    array<int, SIZE>::iterator found = find(list.begin(), list.end(), MISSED_EXAM); 
 
     cout << "CLASS 1241A" << "\n" << endl;
     cout << "Number of student: " << list.size()<< endl;
@@ -39,6 +40,9 @@ void outputArray(array<int, SIZE> list){
     cout << "Grade of the very last student in the list" << list.back() << endl;
     cout << "Did the entire class miss the exam?" << endl;
     cout << (list.empty() == 0? "No" : "Yes" ) << endl;
+    cout << "Did any of the student miss the exam?(some one got a grade of 0)" << endl;
+    cout << (found != list.end()? "Yes, unfortunately at least one student missed the exam." : "No, none of the students missed the exam") << endl;
+
 
 
 }
